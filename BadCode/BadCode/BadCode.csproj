@@ -41,16 +41,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonMistakes\BaseWizardStep.cs" />
+    <Compile Include="CodeSmells\CS01.cs" />
+    <Compile Include="CodeSmells\CS02.cs" />
+    <Compile Include="CodeSmells\CS03.cs" />
+    <Compile Include="CodeSmells\CS04.cs" />
+    <Compile Include="CodeSmells\CS05.cs" />
+    <Compile Include="CodeSmells\CS06.cs" />
+    <Compile Include="CodeSmells\CS07.cs" />
+    <Compile Include="CodeSmells\CS08.cs" />
+    <Compile Include="CodeSmells\CS09.cs" />
+    <Compile Include="CodeSmells\CS10.cs" />
+    <Compile Include="CodeSmells\CS11.cs" />
     <Compile Include="CommonMistakes\CM01_Parsing.cs" />
     <Compile Include="CommonMistakes\CM02_Strings.cs" />
     <Compile Include="CommonMistakes\CM03_HomeController.cs" />
+    <Compile Include="CommonMistakes\CM04_RefVal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

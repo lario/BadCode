@@ -8,5 +8,6 @@ namespace BadCode.CodeSmells
 {
     class CS02
     {
+        //long method
     }
 }
