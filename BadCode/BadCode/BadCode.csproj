@@ -56,6 +56,7 @@
     <Compile Include="CommonMistakes\CM02_Strings.cs" />
     <Compile Include="CommonMistakes\CM03_HomeController.cs" />
     <Compile Include="CommonMistakes\CM04_RefVal.cs" />
+    <Compile Include="CommonMistakes\CM05_Exceptions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
