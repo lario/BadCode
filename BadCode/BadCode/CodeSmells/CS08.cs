@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace BadCode.CommonMistakes
+namespace BadCode.CodeSmells
 {
-    class BaseWizardStep<T>
+    class CS08
     {
+        // Shotgun surgery
     }
 }
