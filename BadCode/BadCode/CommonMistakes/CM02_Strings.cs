@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BadCode.CommonMistakes
@@ -115,6 +117,24 @@ namespace BadCode.CommonMistakes
         #region Comparison
 
         //show in turkey
+
+        void Test()
+        {
+            string s = "strasse";
+
+            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("DE-de");
+
+            // outputs False:
+            Console.WriteLine(s == "straße");
+            Console.WriteLine(s.Equals("straße"));
+            Console.WriteLine(s.Equals("straße", StringComparison.Ordinal));
+            Console.WriteLine(s.Equals("Straße", StringComparison.CurrentCulture));        
+            Console.WriteLine(s.Equals("straße", StringComparison.OrdinalIgnoreCase));
+  
+            // outputs True:
+            Console.WriteLine(s.Equals("straße", StringComparison.CurrentCulture));
+            Console.WriteLine(s.Equals("Straße", StringComparison.CurrentCultureIgnoreCase));
+        }
 
         #endregion
     }
