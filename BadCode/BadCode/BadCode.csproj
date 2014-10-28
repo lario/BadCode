@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonMistakes\BaseWizardStep.cs" />
-    <Compile Include="CommonMistakes\CM01.cs" />
-    <Compile Include="CommonMistakes\CM02.cs" />
+    <Compile Include="CommonMistakes\CM01_Parsing.cs" />
+    <Compile Include="CommonMistakes\CM02_Strings.cs" />
     <Compile Include="CommonMistakes\CM03_HomeController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
