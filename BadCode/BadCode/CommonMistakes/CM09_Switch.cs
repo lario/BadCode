@@ -15,6 +15,7 @@ namespace BadCode.CommonMistakes
 
     class CM09_Switch
     {
+        #region Bad
         public bool IsAllowedBad(Role role)
         {
             if (role == Role.User)
@@ -30,7 +31,7 @@ namespace BadCode.CommonMistakes
         public void SaveFile(string content)
         {
             int quota = 0;
-            
+
             switch (GetCurrentRole())
             {
                 case Role.Admin:
@@ -46,8 +47,10 @@ namespace BadCode.CommonMistakes
                 throw new QuotaExcedeedException();
 
             // save file
-        }
+        } 
+        #endregion
 
+        #region Good
         public bool IsAllowedGood(Role role)
         {
             if (role == Role.User)
@@ -61,7 +64,6 @@ namespace BadCode.CommonMistakes
 
             return false;
         }
-
 
         public void SaveFile(string content)
         {
@@ -85,8 +87,10 @@ namespace BadCode.CommonMistakes
                 throw new QuotaExcedeedException();
 
             // save file
-        }
+        } 
+        #endregion
 
+        #region ...
         private Role GetCurrentRole()
         {
             return Role.Admin;
@@ -94,6 +98,7 @@ namespace BadCode.CommonMistakes
 
         class QuotaExcedeedException : Exception
         {
-        }
+        } 
+        #endregion
     }
 }

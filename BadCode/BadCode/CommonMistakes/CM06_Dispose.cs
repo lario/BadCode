@@ -10,6 +10,7 @@ namespace BadCode.CommonMistakes
 {
     class CM06
     {
+        #region Bad
         public void Bad()
         {
             SqlConnection connection = new SqlConnection("");
@@ -19,8 +20,10 @@ namespace BadCode.CommonMistakes
             // use the connection
 
             connection.Close();
-        }
+        } 
+        #endregion
 
+        #region Good
         public void Good()
         {
             using (SqlConnection connection = new SqlConnection(""))
@@ -29,6 +32,7 @@ namespace BadCode.CommonMistakes
 
                 // use the connection
             }
-        }
+        } 
+        #endregion
     }
 }

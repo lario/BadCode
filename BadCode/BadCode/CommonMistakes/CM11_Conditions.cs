@@ -15,6 +15,7 @@ namespace BadCode.CommonMistakes
         private decimal _summerRate;
         private decimal _winterServiceCharge;
 
+        #region Bad
         public void Bad(int quantity)
         {
             var date = DateTime.Now;
@@ -28,8 +29,10 @@ namespace BadCode.CommonMistakes
             {
                 charge = quantity * _summerRate;
             }
-        }
+        } 
+        #endregion
 
+        #region Good
         public void Good(int quantity)
         {
             decimal charge = 0;
@@ -47,6 +50,7 @@ namespace BadCode.CommonMistakes
         private bool NotSummer(DateTime date)
         {
             return date < SUMMER_START || date > SUMMER_END;
-        }
+        } 
+        #endregion
     }
 }
