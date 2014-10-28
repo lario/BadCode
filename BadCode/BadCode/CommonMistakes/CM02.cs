@@ -34,7 +34,7 @@ namespace BadCode.CommonMistakes
 
         #region Format
 
-        void Bad()
+        void Bad2()
         {
             var elementType = "Employer";
             var id = 1;
@@ -42,7 +42,7 @@ namespace BadCode.CommonMistakes
             var result = "Are you sure you want to remove " + elementType + " with id: " + id + "?";
         }
 
-        void Good()
+        void Good2()
         {
             var elementType = "Employer";
             var id = 1;
@@ -54,7 +54,7 @@ namespace BadCode.CommonMistakes
 
         #region ML String
 
-        void Bad()
+        void Bad3()
         {
             var result = "SELECT column_name, aggregate_function(column_name) " +
                             "FROM table_name " +
@@ -62,7 +62,7 @@ namespace BadCode.CommonMistakes
                             "GROUP BY column_name;";
         }
 
-        void Good()
+        void Good3()
         {
             var result = @"SELECT column_name, aggregate_function(column_name)
                             FROM table_name
@@ -74,7 +74,7 @@ namespace BadCode.CommonMistakes
 
         #region Concat list
 
-        void Bad()
+        void Bad4()
         {
             var values = new string[]{"value1", "value2", "value3"};
 
@@ -89,7 +89,7 @@ namespace BadCode.CommonMistakes
             }
         }
 
-        void Bad()
+        void Bad5()
         {
             var values = new string[] { "value1", "value2", "value3" };
 
@@ -103,7 +103,7 @@ namespace BadCode.CommonMistakes
             result.TrimEnd(',');
         }
 
-        void Good()
+        void Good4()
         {
             var values = new string[] { "value1", "value2", "value3" };
 

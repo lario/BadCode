@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BadCode.CommonMistakes
 {
-    class CM01_q
+    class CM01
     {
         #region Bad
 
