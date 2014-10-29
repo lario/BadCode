@@ -5,9 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using NUnit.Framework;
 
 namespace BadCode.CommonMistakes
 {
+    [TestFixture]
     class CM02
     {
         #region Concaternation
@@ -116,25 +118,37 @@ namespace BadCode.CommonMistakes
 
         #region Comparison
 
-        //show in turkey
+        [Test]
+        public void ToUpper()
+        {
+            #region ...
+            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("tr-TR");
+            #endregion
 
-        void Test()
+            string orientation = "portrait";
+
+            Assert.AreEqual(orientation.ToUpper(), "PORTRAIT");
+        }
+
+        [Test]
+        public void Equals()
         {
             string s = "strasse";
 
-            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("DE-de");
+            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("de-DE");
 
-            // outputs False:
-            Console.WriteLine(s == "straße");
-            Console.WriteLine(s.Equals("straße"));
-            Console.WriteLine(s.Equals("straße", StringComparison.Ordinal));
-            Console.WriteLine(s.Equals("Straße", StringComparison.CurrentCulture));        
-            Console.WriteLine(s.Equals("straße", StringComparison.OrdinalIgnoreCase));
-  
-            // outputs True:
-            Console.WriteLine(s.Equals("straße", StringComparison.CurrentCulture));
-            Console.WriteLine(s.Equals("Straße", StringComparison.CurrentCultureIgnoreCase));
+            Assert.IsTrue(s == "straße");
+            Assert.IsTrue(s.Equals("straße"));
+            Assert.IsTrue(s.Equals("straße", StringComparison.Ordinal));
+            Assert.IsTrue(s.Equals("Straße", StringComparison.CurrentCulture));
+            Assert.IsTrue(s.Equals("straße", StringComparison.OrdinalIgnoreCase));  
+            Assert.IsTrue(s.Equals("straße", StringComparison.CurrentCulture));
+            Assert.IsTrue(s.Equals("STRAßE", StringComparison.CurrentCultureIgnoreCase));
         }
+
+        #region references
+        // http://www.moserware.com/2008/02/does-your-code-pass-turkey-test.html                
+        #endregion        
 
         #endregion
     }

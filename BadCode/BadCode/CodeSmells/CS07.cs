@@ -33,9 +33,9 @@ namespace BadCode.CodeSmells
 
         class AccountSerializer
         {
-            public string ToXml()
+            public string ToXml(Account account)
             {
-                return string.Format("<account><name>{0}</name><amount>{1}</amount></account>", HolderName, Amount);
+                return string.Format("<account><name>{0}</name><amount>{1}</amount></account>", account.HolderName, account.Amount);
             }
         }
     }

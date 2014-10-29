@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,13 +60,25 @@
     <Compile Include="CommonMistakes\CM03_HomeController.cs" />
     <Compile Include="CommonMistakes\CM04_RefVal.cs" />
     <Compile Include="CommonMistakes\CM05_Exceptions.cs" />
+    <Compile Include="CommonMistakes\CM06_Dispose.cs" />
+    <Compile Include="CommonMistakes\CM07_Linq.cs" />
+    <Compile Include="CommonMistakes\CM08_Nplus1.cs" />
+    <Compile Include="CommonMistakes\CM09_Switch.cs" />
+    <Compile Include="CommonMistakes\CM10_Const.cs" />
+    <Compile Include="CommonMistakes\CM11_Conditions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{a1f56e87-0c4b-4a0e-aa33-c5cd442db0d0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

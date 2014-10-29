@@ -65,7 +65,7 @@ namespace BadCode.CommonMistakes
             return false;
         }
 
-        public void SaveFile(string content)
+        public void SaveFileGood(string content)
         {
             int quota = 0;
 

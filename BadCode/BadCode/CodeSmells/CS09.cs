@@ -48,7 +48,7 @@ namespace BadCode.CodeSmells
 
             void DoWork()
             {
-                var area = Shape.Area;
+                var area = Shape.Area();
             }
         }
     }

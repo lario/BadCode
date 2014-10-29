@@ -8,8 +8,8 @@ namespace BadCode.CommonMistakes
 {
     class CM11_Conditions
     {
-        private const DateTime SUMMER_START = new DateTime(2014, 6, 1);
-        private const DateTime SUMMER_END = new DateTime(2014, 9, 1);
+        private static DateTime SUMMER_START = new DateTime(2014, 6, 1);
+        private static DateTime SUMMER_END = new DateTime(2014, 9, 1);
 
         private decimal _winterRate;
         private decimal _summerRate;

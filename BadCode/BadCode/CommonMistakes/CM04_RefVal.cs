@@ -27,7 +27,7 @@ namespace BadCode.CommonMistakes
             ChangeValue3(ref obj);
             Console.WriteLine(obj.Number);
 
-            ChangeValue3(ref new MyClass(5));
+            // ChangeValue3(ref new MyClass(5));
             Console.WriteLine(obj.Number);
         }
 
