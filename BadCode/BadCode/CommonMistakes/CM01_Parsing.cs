@@ -11,19 +11,15 @@ namespace BadCode.CommonMistakes
     class CM01
     {
         #region Bad
-
         [Test]
         public void Bad1()
         {
             string input = Console.ReadLine();
-
             var result = int.Parse(input);
         } 
 
         #endregion
-
         #region Bad
-
         [Test]
         public void Bad2()
         {
@@ -39,11 +35,8 @@ namespace BadCode.CommonMistakes
                 result = 0;
             }            
         } 
-
         #endregion
-
         #region Good
-
         [Test]
         public void Good()
         {
@@ -55,7 +48,6 @@ namespace BadCode.CommonMistakes
                 // use the value
             }
         } 
-
         #endregion
     }
 }
