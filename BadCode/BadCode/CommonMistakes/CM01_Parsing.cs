@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NUnit.Framework;
 
 namespace BadCode.CommonMistakes
 {
+    [TestFixture]
     class CM01
     {
         #region Bad
 
+        [Test]
         public void Bad1()
         {
             string input = Console.ReadLine();
@@ -21,6 +24,7 @@ namespace BadCode.CommonMistakes
 
         #region Bad
 
+        [Test]
         public void Bad2()
         {
             string input = Console.ReadLine();
@@ -40,6 +44,7 @@ namespace BadCode.CommonMistakes
 
         #region Good
 
+        [Test]
         public void Good()
         {
             string input = Console.ReadLine();

@@ -36,7 +36,7 @@ namespace BadCode.CommonMistakes
 
         #endregion
 
-        #region Format
+        #region Concaterantion 2
 
         void Bad2()
         {
