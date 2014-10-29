@@ -8,6 +8,5 @@ namespace BadCode.CodeSmells
 {
     class CS06
     {
-        // divergent change
     }
 }
