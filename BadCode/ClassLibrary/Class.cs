@@ -8,6 +8,6 @@ namespace ClassLibrary
 {
     public class Class
     {
-        public const string FILENAME = "D:\\temp\\data.xml";
+        public const string FILENAME = "D:\\temp\\file1.txt";
     }
 }
