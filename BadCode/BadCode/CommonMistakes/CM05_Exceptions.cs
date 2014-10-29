@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BadCode.CommonMistakes
 {
-    class CM05
+    internal class CM05
     {
         public void Bad(string filename)
         {
@@ -33,12 +29,14 @@ namespace BadCode.CommonMistakes
                 throw ex;
             }
         }
-    }
 
-    class MessageBox
-    {
-        public static void Show(string message)
+        #region Utils
+        private class MessageBox
         {
+            public static void Show(string message)
+            {
+            }
         }
+        #endregion
     }
 }

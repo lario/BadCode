@@ -1,24 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BadCode.CommonMistakes
 {
-    class MyClass
+    internal class CM04
     {
-        public MyClass(int n)
+        internal class MyClass
         {
-            this.Number = n;
+            public MyClass(int n)
+            {
+                Number = n;
+            }
+
+            public int Number { get; set; }
         }
 
-        public int Number { get; set; }
-    }
-
-    class CM04
-    {
-        static void Test(string[] args)
+        private static void Test(string[] args)
         {
             var obj = new MyClass(0);
 
@@ -35,20 +31,19 @@ namespace BadCode.CommonMistakes
             Console.WriteLine(obj.Number);
         }
 
-        static void ChangeValue1(MyClass cls)
+        private static void ChangeValue1(MyClass cls)
         {
             cls = new MyClass(1);
         }
 
-        static void ChangeValue2(MyClass cls)
+        private static void ChangeValue2(MyClass cls)
         {
             cls.Number = 2;
         }
 
-        static void ChangeValue3(ref MyClass cls)
+        private static void ChangeValue3(ref MyClass cls)
         {
             cls = new MyClass(3);
         }
     }
-
 }

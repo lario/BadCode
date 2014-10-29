@@ -1,50 +1,54 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BadCode.CommonMistakes
 {
-    public class HomeController : Controller
+    internal class CM03
     {
-        public static string UserName { get; set; }
-
-        [HttpPost]
-        public HomeViewModel GetViewModel()
+        public class HomeController : Controller
         {
-            var viewModel = GetExpensiveModelFromDataBase();
+            public static string UserName { get; set; }
 
-            UserName = viewModel.UserName;
+            [HttpPost]
+            public HomeViewModel GetViewModel()
+            {
+                dynamic viewModel = GetExpensiveModelFromDataBase();
 
-            return viewModel;
+                UserName = viewModel.UserName;
+
+                return viewModel;
+            }
+
+            [HttpPost]
+            public void ResetPassword()
+            {
+                SendEmailToUser(UserName);
+            }
+
+            private void SendEmailToUser(string UserName)
+            {
+                throw new NotImplementedException();
+            }
+
+            private dynamic GetExpensiveModelFromDataBase()
+            {
+                throw new NotImplementedException();
+            }
         }
 
-        [HttpPost]
-        public void ResetPassword()
+        #region ...
+
+        public class Controller
         {
-            SendEmailToUser(UserName);
         }
 
-        private void SendEmailToUser(string UserName)
+        public class HttpPost : Attribute
         {
-            throw new NotImplementedException();
         }
 
-        private dynamic GetExpensiveModelFromDataBase()
+        public class HomeViewModel
         {
-            throw new NotImplementedException();
         }
 
+        #endregion
     }
-
-    #region ...
-
-    public class Controller { }
-
-    public class HttpPost : Attribute { }
-
-    public class HomeViewModel { }
-
-    #endregion
 }
